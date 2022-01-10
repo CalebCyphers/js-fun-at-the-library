@@ -13,34 +13,39 @@
 // var title = "Harry Potter";
 // var ...
 
+let title = "Hitchhiker's Guide"
+let pages = 342
+
 
 
 // Reassign (not initialize) your "pages" variable from above. An editor came around and
 // condensed the book, use a built in math operator to make the page count a quarter
 // of what it currently is 
 
-
+pages = Math.floor(pages * 0.25)
 
 // Initialize a new variable "movie", but leave it undefined
+
+let movie
 
 
 
 // Create a variable named "sequel", and assign it to a be a sequel of your
 // book (made up or not!). Your sequel must make use of your "title" variable from above
 
-
+let sequel = `${title} II`
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the book you chose is your favorite book or not
 
-
-
+let isFavorite = true
 
 // Create a new variable named "isShortStory", and use a comparison operator to
 // assign a boolean value to this variable. If "pages" is less than 25, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
+let isShortStory = pages < 25 ? true : false 
 
 
 //------------------------- Conditionals -------------------------//
@@ -50,14 +55,16 @@
 // the statement 'I could read that in a day!', otherwise, log the statement 
 // 'Ok, maybe I could read that in a day and a half'
 
-
+let statement = pages < 1000 ? "I could read that in a day!" : "Ok, maybe I could read that in a day and a half"
+console.log(statement)
 
 // Express the following in code: If the variable "isFavorite" is true,
 // log the statement 'My favorite book is [title]!'. Otherwise, log the
 // statement 'I recently read the [title] book'. In either case, the value stored in
 // the "title" variable should be included in the logged statement.
 
-
+statement = isFavorite ? `My favorite book is ${title}!` : `I recently read the ${title} book`
+console.log(statement)
 
 //------------------------- Arrays -------------------------//
 
@@ -65,16 +72,22 @@
 // Create a new variable "books" and assign it to an Array of 5 different
 // book titles, represented by their names as Strings.
 
+let books = ["Hooky", "Lore Olympus Vol 1.", "Castle Swimmer", "Sarah's Scribbles: Herding Cats", "Blue Chair"]
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+console.log(books[2])
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
 
+let belowTwoHundred = [34, 42, 6, 150, 188, 88, 20, 31, 101, 115, 89, 169]
+
 
 // Write the code to access the 5th element of the array, using bracket notation.
+
+console.log(belowTwoHundred[4])
 
 
 //------------------------- Objects -------------------------//
@@ -83,6 +96,15 @@
 // keys: name, and hasThesaurus. The value for name should the string 'Webster's', and
 // the value for hasThesaurus should be false
 
+let dictionary = {
+    name: "Webster's", 
+    hasThesaurus: false
+}
+
 
 // Write the code to add the key of pageCount, with the value of 720. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+dictionary.pageCount = 720
+
+console.log(dictionary)
